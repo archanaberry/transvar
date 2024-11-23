@@ -1,0 +1,9 @@
+---  Archana Berry Template Language Indonesian ---
+Kalo mau tambahin juga gafafah, teks ini aman langsung dianggap komentar
+oleh sistem program ku jika tanpa "\u2B80" atau "⮀" dari nya
+
+-- locale string variable ---
+⮀halo_dunia⮀ = ⮀Halo, Dunia!⮀
+⮀aku_makan⮀ = ⮀Saya sedang makan.⮀
+⮀saya_tinggi⮀ = ⮀Saya cukup tinggi.⮀
+-- END --
