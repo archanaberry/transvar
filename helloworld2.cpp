@@ -1,12 +1,13 @@
-#include <iostream>
 #include "transvar.hpp"
 
 int main() {
-    // Memuat file bahasa (misalnya "halodunia.id" untuk bahasa Indonesia)
-    TRANSVAR.loadFileLang("halodunia.id");
+    // Memuat file bahasa
+    if (!TRANSVAR.loadFileLang("halodunia.id")) {
+        return 1; // Keluar jika file bahasa tidak ditemukan
+    }
 
-    // Menampilkan nilai variabel bahasa
-    std::cout << TRANSVAR["halo_dunia"] << std::endl;
+    // Mendapatkan terjemahan
+    std::cout << TRANSVAR["halo"] << std::endl;
 
     return 0;
 }
