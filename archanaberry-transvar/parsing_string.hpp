@@ -34,9 +34,9 @@ std::vector<int> compute_lps_array(const std::string& pattern) {
 
 // Fungsi pencocokan pola
 bool match_pattern(const std::string& input, const std::string& pattern, std::vector<std::string>& matches) {
-    size_t start = input.find("⮀");
+    size_t start = input.find("\u2B80");
     while (start != std::string::npos) {
-        size_t end = input.find("⮀", start + 3); // Cari simbol "⮀" kedua
+        size_t end = input.find("\u2B80", start + 3); // Cari simbol "⮀" kedua
         if (end == std::string::npos) break;
 
         // Ambil bagian antara simbol "⮀"
@@ -44,7 +44,7 @@ bool match_pattern(const std::string& input, const std::string& pattern, std::ve
         matches.push_back(match);
 
         // Lanjutkan pencarian
-        start = input.find("⮀", end + 1);
+        start = input.find("\u2B80", end + 1);
     }
 
     return !matches.empty(); // Return true jika ada kecocokan
