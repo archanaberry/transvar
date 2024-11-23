@@ -20,7 +20,7 @@ public:
     }
 
     // Fungsi untuk memuat file bahasa
-    bool loadFile(const std::string& filename) {
+    bool loadFileLang(const std::string& filename) {
         std::ifstream infile(filename);
         if (!infile) {
             std::cerr << "Gagal membuka file: " << filename << "\n";
@@ -28,7 +28,7 @@ public:
         }
 
         std::string line;
-        const std::string pattern = "⮀"; // Simbol untuk memisahkan bagian
+        const std::string pattern = "\u2B80"; // Simbol untuk memisahkan bagian
         while (std::getline(infile, line)) {
             std::vector<std::string> matches;
             if (parsing_string::match_pattern(line, pattern, matches)) {
